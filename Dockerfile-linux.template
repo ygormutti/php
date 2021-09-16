@@ -162,12 +162,7 @@ ENV PHP_EXTRA_CONFIGURE_ARGS {{
 	else
 		"--enable-maintainer-zts"
 	end
--}}
-{{
-	if (is_alpine | not) then
-		" --enable-embed"
-	else "" end
-}} --disable-cgi
+}} --disable-cgi --enable-embed
 
 {{ ) else "" end -}}
 # Apply stack smash protection to functions using local buffers and alloca()
